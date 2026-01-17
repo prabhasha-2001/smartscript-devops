@@ -1,6 +1,5 @@
 let qr;
 
-// Add new medicine row
 function addMedicine() {
   const div = document.createElement("div");
   div.className = "medicine";
@@ -14,9 +13,7 @@ function addMedicine() {
   document.getElementById("medicineList").appendChild(div);
 }
 
-// Generate real prescription format
 function generatePrescription() {
-
   let medicineRows = "";
 
   document.querySelectorAll(".medicine").forEach((med, index) => {
@@ -25,40 +22,40 @@ function generatePrescription() {
     const dosage = med.querySelector(".dosage").value;
 
     if (drug && dose && dosage) {
-      medicineRows += `${index + 1}. ${drug.padEnd(15)} ${dose.padEnd(10)} ${dosage}\n`;
+      medicineRows += `${index + 1}. ${drug} | ${dose} | ${dosage}\n`;
     }
   });
 
-  const prescription = `
-Patient Name : ${document.getElementById("patientName").value}
-Age          : ${document.getElementById("age").value}
-Disease      : ${document.getElementById("disease").value}
+  if (!medicineRows) {
+    alert("Add at least one medicine");
+    return;
+  }
 
------------------------------------------
+  const prescription = `
+Patient Name : ${patientName.value}
+Age          : ${age.value}
+Disease      : ${disease.value}
+
+--------------------------------
 Drug Details
------------------------------------------
-Medicine        Dose       Dosage
------------------------------------------
+--------------------------------
 ${medicineRows}
 
------------------------------------------
-                          Doctor Name      : ${document.getElementById("doctorName").value}
-                          SLMC Register No : ${document.getElementById("doctorReg").value}
-                          Hospital Name    : ${document.getElementById("hospital").value}
+Doctor Name  : ${doctorName.value}
+SLMC No      : ${doctorReg.value}
+Hospital     : ${hospital.value}
 `;
 
-  document.getElementById("output").innerText = prescription;
+  output.innerText = prescription;
 
-  // Generate QR Code
-  document.getElementById("qrcode").innerHTML = "";
-  qr = new QRCode(document.getElementById("qrcode"), prescription);
+  qrcode.innerHTML = "";
+  qr = new QRCode(qrcode, prescription);
 }
 
-// Save QR as Image
 function saveQR() {
   const img = document.querySelector("#qrcode img");
   if (!img) {
-    alert("Please generate prescription first");
+    alert("Generate prescription first");
     return;
   }
 
@@ -67,3 +64,4 @@ function saveQR() {
   a.download = "prescription_qr.png";
   a.click();
 }
+
