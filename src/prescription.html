@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SmartScript | Prescription</title>
+  <link rel="stylesheet" href="styles_style.css">
+</head>
+<body>
+
+<h2>Create Prescription</h2>
+
+<h3>Doctor Details</h3>
+<input id="doctorName" placeholder="Doctor Name"><br>
+<input id="doctorReg" placeholder="SLMC Register Number"><br>
+<input id="hospital" placeholder="Hospital Name"><br>
+<input id="hospitalReg" placeholder="Hospital Register Number"><br>
+<input id="dateTime" type="datetime-local"><br>
+
+<h3>Patient Details</h3>
+<input id="patientName" placeholder="Patient Name"><br>
+<input id="age" placeholder="Age"><br>
+<input id="disease" placeholder="Disease"><br>
+
+<h3>Drug Details</h3>
+
+<div id="medicineList">
+  <div class="medicine">
+    <input class="drug" placeholder="Drug Name">
+    <input class="dose" placeholder="Dose (e.g. 500mg)">
+    <input class="dosage" placeholder="Dosage (e.g. 1 tablet twice daily)">
+  </div>
+</div>
+
+<button type="button" onclick="addMedicine()">+ Add Another Medicine</button>
+<br><br>
+
+<button onclick="generatePrescription()">Generate Prescription</button>
+
+<pre id="output"></pre>
+
+<h3>QR Code</h3>
+<div id="qrcode"></div><br>
+<button onclick="saveQR()">Save QR as Image</button>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+<script src="scripts_qr.js"></script>
+</body>
+</html>
