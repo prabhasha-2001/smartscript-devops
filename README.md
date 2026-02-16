@@ -1,10 +1,10 @@
 # SmartScript – Prescription Reader App
 
 ## Group Information
-M. T. Prabhasha Dilshani		ITBIN-2313-0026
+Tharushi Dilshani		ITBIN-2313-0026
 Role: DevOps Engineer
 
-M. U. Sandamali Wanasinghe		ITBIN-2313-0122
+Upeksha Sandamali    ITBIN-2313-0122
 Role: Full-Stack Developer
 
 ## Project Description
@@ -14,6 +14,7 @@ SmartScript-DevOps is a beginner-friendly DevOps project demonstrating Git colla
 ## Live Deployment
 https://smartscript-devops.netlify.app/
 
+# The login process uses the SLMC registration number: RG000034
 
 ## Technologies Used
 - HTML5, CSS3, JavaScript
