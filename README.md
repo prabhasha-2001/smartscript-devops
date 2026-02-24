@@ -59,3 +59,17 @@ feature – individual development
 git clone https://github.com/prabhasha-2001/smartscript-devops.git
 cd smartscript-devops
 open index.html
+
+---
+
+# Docker Setup
+
+## Build
+docker build -t myapp .
+
+## Run
+docker run -p 5000:5000 myapp
+
+## Using Docker Compose
+docker-compose up --build
+![alt text](image.png)
