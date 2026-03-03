@@ -61,8 +61,6 @@ cd smartscript-devops
 open index.html
 
 
-
-
 #dockersSetup
 
 ##build

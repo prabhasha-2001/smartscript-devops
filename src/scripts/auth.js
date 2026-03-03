@@ -10,6 +10,6 @@ function login() {
   localStorage.setItem("role", role);
   localStorage.setItem("regNo", regNo);
 
-  
+
   window.location.href = "prescription.html";
 }
