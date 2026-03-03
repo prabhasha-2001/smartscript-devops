@@ -62,13 +62,13 @@ open index.html
 
 ---
 
-#dockersSetup
+# Docker setup
 
-##build
+## build docker image
 docker build -t myapp .
 
-##run
+## run
 docker run -p 5000:5000 myapp
 
-##using docker compose
+## using docker compose
 docker-compose up --build
