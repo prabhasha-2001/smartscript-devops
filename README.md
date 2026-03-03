@@ -65,7 +65,7 @@ open index.html
 #dockersSetup
 
 ##build
-docker build -t myapp .
+docker build -t mypythonapp .
 
 ##run
 docker run -p 5000:5000 myapp
