@@ -13,6 +13,7 @@ function addMedicine() {
   document.getElementById("medicineList").appendChild(div);
 }
 
+
 function generatePrescription() {
   let medicineRows = "";
 

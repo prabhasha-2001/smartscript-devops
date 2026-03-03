@@ -60,7 +60,7 @@ git clone https://github.com/prabhasha-2001/smartscript-devops.git
 cd smartscript-devops
 open index.html
 
----
+
 
 
 #dockersSetup
