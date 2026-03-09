@@ -22,9 +22,8 @@ jobs:
           if [ -f package.json ]; then
             npm install
           else
-            echo "No package.json found"
+            echo " No package.json found "
           fi
 
-
       - name: Build check
-        run: echo "Build OK"
+        run: echo " Build OK "
